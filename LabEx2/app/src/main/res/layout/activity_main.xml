@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- Top Icon (Replaces UIImageView) -->
+    <ImageView
+        android:id="@+id/imgAppLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:background="#B0C4DE"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_compass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+    <!-- Output Label -->
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgAppLogo" />
+
+    <!-- Row 1: Subtract Button (-) -->
+    <Button
+        android:id="@+id/btnSubtract"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#3B7A57"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toStartOf="@id/btnAdd"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOutput" />
+
+    <!-- Row 1: Add Button (+) -->
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#3B7A57"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnSubtract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnSubtract"
+        app:layout_constraintTop_toTopOf="@id/btnSubtract" />
+
+    <!-- Row 2: Reset Button -->
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FF0055"
+        android:text="Reset"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@id/btnSubtract"
+        app:layout_constraintStart_toStartOf="@id/btnSubtract"
+        app:layout_constraintTop_toBottomOf="@id/btnSubtract" />
+
+    <!-- Row 2: Step Button -->
+    <Button
+        android:id="@+id/btnStep"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#00CC44"
+        android:text="Step"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnReset"
+        app:layout_constraintEnd_toEndOf="@id/btnAdd"
+        app:layout_constraintStart_toStartOf="@id/btnAdd"
+        app:layout_constraintTop_toTopOf="@id/btnReset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
